@@ -100,12 +100,12 @@ export const removeHandler = (key, handler) => {
 
       if (register[key].length === 0) {
         delete register[key];
-      }
-    }
 
-    /** Was the last key on the register, let's unlisten */
-    if (--register.length === 0) {
-      unlisten();
+        /** Was the last key on the register, let's unlisten */
+        if (--register.length === 0) {
+          unlisten();
+        }
+      }
     }
   }
 };
