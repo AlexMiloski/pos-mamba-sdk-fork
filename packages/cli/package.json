@@ -4,6 +4,19 @@
   "description": "Tools for creating, running, and deploying POS Mamba SDK projects",
   "author": "Stone Payments",
   "license": "Apache-2.0",
+  "main": "build/mamba.js",
+  "scripts": {
+    "start": "yarn run prepare && yarn run watch",
+    "build": "babel src --out-dir build --extensions \".ts\" --source-maps --ignore \"src/**/__mocks__/*\",\"src/**/__tests__/*\"",
+    "watch": "tsc --watch",
+    "prepare": "yarn run clean && yarn run build",
+    "clean": "rimraf build ./tsconfig.tsbuildinfo",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "engines": {
     "node": ">=6.9.1"
   },
@@ -11,12 +24,21 @@
     "build",
     "bin"
   ],
-  "scripts": {
-    "start": "yarn run prepare && yarn run watch",
-    "build": "babel lib --out-dir build --extensions \".ts\" --source-maps --ignore \"lib/**/__mocks__/*\",\"lib/**/__tests__/*\"",
-    "watch": "tsc --watch",
-    "prepare": "yarn run clean && yarn run build",
-    "clean": "rimraf build ./tsconfig.tsbuildinfo"
+  "jest": {
+    "testEnvironment": "node",
+    "roots": [
+      "__mocks__",
+      "src"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "json"
+    ],
+    "resetModules": false
+  },
+  "bin": {
+    "mamba": "./bin/run"
   },
   "repository": {
     "type": "git",
