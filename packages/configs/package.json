@@ -1,0 +1,7 @@
+{
+  "name": "@mamba/configs",
+  "version": "3.0.0-alpha",
+  "description": "Tooling config presets to use in mamba projects.",
+  "author": "Stone Payments",
+  "license": "Apache-2.0"
+}
