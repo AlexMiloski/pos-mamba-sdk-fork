@@ -29,7 +29,8 @@ Develop applications using only web technology, without worrying about the compl
 
 Make sure all dependencies have been installed before moving on:
 
-- [Node.js](http://nodejs.org/) >= v8.11.3
+- [Node.js](http://nodejs.org/) >= v8.11.0
+- [NPM](https://www.npmjs.com/package/npm) >= v5.6.0
 - [Lerna](https://github.com/lerna/lerna) >= v3.0.0
 
 
