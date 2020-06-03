@@ -1,10 +1,16 @@
 {
   "name": "mamba-sdk",
   "version": "3.0.0-alpha",
-  "description": "SDK for developing in the Mamba web environment",
-  "repository": "https://github.com/stone-payments/pos-mamba-sdk.git",
+  "description": "SDK for develop POS Mamba web environment",
+  "homepage": "https://github.com/stone-payments/pos-mamba-sdk#readme",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stone-payments/pos-mamba-sdk.git"
+  },
   "author": "Stone Payments - Mamba Team",
   "license": "Apache-2.0",
+  "private": true,
   "workspaces": [
     "packages/*"
   ],
@@ -13,10 +19,11 @@
     "npm": ">= 5.6.0"
   },
   "scripts": {
-    "lint:js": "eslint \"{internal,packages}/**/*.{js,html,svelte}\""
+    "lint:js": "eslint \"{packages}/**/*.{js,html,svelte}\""
   },
   "husky": {
     "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
       "pre-commit": "lint-staged"
     }
   },
