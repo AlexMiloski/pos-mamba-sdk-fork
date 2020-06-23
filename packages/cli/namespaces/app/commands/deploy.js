@@ -20,15 +20,19 @@ module.exports = {
     const { id } = PKG.mamba;
     const appSlug = `${id}-${PKG.name}`;
 
-    const REMOTE_APP_DIR = `POS:/data/app/MAINAPP/apps/${appSlug}.stone`;
+    const REMOTE_APP_DIR = `POS:/data/app/MAINAPP/apps/${appSlug}`;
     const DIST_DIR = fromCwd(legacy ? 'ui/dist' : 'dist/bundle.pos');
 
     console.log(`Deploying "${appSlug}" to "${REMOTE_APP_DIR}"`);
-    shell(
-      `rsync -zzaP ${
-        !force ? '--checksum' : ''
-      } --delete ${DIST_DIR}/ ${REMOTE_APP_DIR}`,
-    );
+
+    let rsyncOptions = '-zzaP';
+    let deployCommand = `${
+      !force ? '--checksum' : ''
+    } --delete ${DIST_DIR}/ ${REMOTE_APP_DIR}`;
+
+    if (process.platform === 'darwin') {
+      rsyncOptions = '-arvc';
+    }
 
     if (legacy) {
       console.log(
@@ -39,12 +43,12 @@ module.exports = {
         .map(path => `--include="${path}"`)
         .join(' ');
 
-      shell(
-        `rsync -zzaPR ${
-          !force ? '--size-only' : ''
-        } --delete ${includes} --exclude '**/*' . ${REMOTE_APP_DIR}/`,
-      );
+      rsyncOptions = '-zzaPR';
+      deployCommand = `${!force ? '--size-only' : ''}
+        --delete ${includes} --exclude '**/*' . ${REMOTE_APP_DIR}/`;
     }
+
+    shell(`rsync ${rsyncOptions} ${deployCommand}`);
     console.log('App deployed');
   },
 };
