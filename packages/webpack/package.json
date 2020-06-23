@@ -1,0 +1,45 @@
+{
+  "name": "@mamba/webpack",
+  "version": "3.0.0",
+  "description": "Webpack configs for Mamba Applications",
+  "author": "Stone Payments - Mamba Team",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.10.1",
+    "chalk": "^4.0.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-html": "^6.0.2",
+    "file-loader": "^6.0.0",
+    "filemanager-webpack-plugin": "^2.0.5",
+    "html-minifier": "^4.0.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "mini-html-webpack-plugin": "^3.0.7",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "quickenv": "^0.0.6",
+    "resolve-url-loader": "^3.1.1",
+    "style-loader": "^1.2.1",
+    "svelte": "^3.23.0",
+    "svelte-loader": "^2.13.6",
+    "typescript": "^3.9.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.0.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2",
+    "webpack-sources": "^1.4.3",
+    "webpack-virtual-modules": "^0.2.2",
+    "webpackbar": "^4.0.0",
+    "xmlbuilder": "^15.1.1"
+  },
+  "dependencies": {
+    "@mamba/configs": "file:../configs"
+  }
+}
