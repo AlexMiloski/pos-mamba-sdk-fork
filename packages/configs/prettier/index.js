@@ -7,4 +7,10 @@ module.exports = {
   bracketSpacing: true,
   jsxBracketSameLine: false,
   singleQuote: true,
+
+  // prettier-plugin-svelte
+  svelteSortOrder: 'styles-scripts-markup',
+  svelteStrictMode: true,
+  svelteBracketNewLine: true,
+  svelteAllowShorthand: true,
 };

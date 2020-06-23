@@ -1,29 +1,33 @@
+const merge = require('webpack-merge');
 const { lineLength } = require('../shared.js');
+const { additionalGlobalsEslint } = require('../helpers/clientEnvironment.js');
 
 const IS_PROD = process.env.NODE_ENV === 'production';
 
 module.exports = {
   root: true,
-  extends: [
-    'airbnb-base',
-    'prettier',
-    'plugin:import/recommended',
-  ],
-  plugins: [
-    'prettier',
-    'html',
-    'svelte3',
-    'import',
-  ],
+  extends: ['airbnb-base', 'prettier', 'plugin:import/recommended'],
+  plugins: ['prettier', 'html', 'svelte3', 'import'],
   env: {
     es6: true,
     browser: true,
   },
   parser: 'babel-eslint',
   parserOptions: {
-    ecmaVersion: 2019,
-    // sourceType: 'module',
+    ecmaVersion: 2018,
   },
+  globals: merge(additionalGlobalsEslint, {
+    __APP_ENV__: true,
+    __NODE_ENV__: true,
+    __BROWSER__: true,
+    __POS__: true,
+    __PROD__: true,
+    __TEST__: true,
+    __DEV__: true,
+    __DEBUG_LVL__: true,
+    __SIMULATOR__: true,
+    __APP_MANIFEST__: true,
+  }),
   overrides: [
     {
       files: ['*.svelte'],
@@ -40,11 +44,11 @@ module.exports = {
     /** Disallow 'console.log' on production */
     'no-console': IS_PROD
       ? [
-        'warn',
-        {
-          allow: ['info', 'warn', 'error'],
-        },
-      ]
+          'warn',
+          {
+            allow: ['info', 'warn', 'error'],
+          },
+        ]
       : 'off',
 
     /** Allow implicit return */
@@ -117,11 +121,7 @@ module.exports = {
     /** Require semicolons without enforcing */
     semi: ['warn', 'always'],
 
-    quotes: [
-      'error',
-      'single',
-      { avoidEscape: true, allowTemplateLiterals: true },
-    ],
+    quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: true }],
 
     'comma-dangle': [
       'error',
@@ -161,6 +161,5 @@ module.exports = {
         ignoreComments: false,
       },
     ],
-
   },
 };

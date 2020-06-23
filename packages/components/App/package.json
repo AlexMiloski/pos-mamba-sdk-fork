@@ -1,0 +1,10 @@
+{
+  "name": "@mamba/app",
+  "version": "3.0.0",
+  "svelte": "App.html",
+  "author": "Stone Payments - Mamba Team",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  }
+}

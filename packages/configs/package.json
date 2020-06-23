@@ -1,0 +1,36 @@
+{
+  "name": "@mamba/configs",
+  "version": "3.0.0",
+  "description": "Tooling config presets to use in mamba projects.",
+  "author": "Stone Payments - Mamba Team",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/polyfill": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/runtime": "^7.10.2",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-dynamic-import-node": "^2.3.3",
+    "chalk": "^4.0.0",
+    "css-mqpacker": "^7.0.0",
+    "eslint-plugin-jest": "^23.13.2",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-calc": "^7.0.2",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-hexrgba": "^2.0.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-reporter": "^6.0.1",
+    "quickenv": "^0.0.6",
+    "resolve": "^1.17.0",
+    "stylelint": "^13.6.0",
+    "svelte-preprocess": "^3.7.4",
+    "webpack-merge": "^4.2.2"
+  }
+}

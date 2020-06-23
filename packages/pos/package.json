@@ -1,0 +1,13 @@
+{
+  "name": "@mamba/pos",
+  "version": "3.0.0",
+  "description": "Mamba web environment wrapper and simulator",
+  "author": "Stone Payments - Mamba Team",
+  "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "immer": "^7.0.3"
+  }
+}
