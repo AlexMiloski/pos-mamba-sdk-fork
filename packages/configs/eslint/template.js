@@ -1,10 +1,10 @@
-const additionalGlobals = require('../helpers/clientEnvironment.js');
+const { additionalGlobalsEslint } = require('../helpers/clientEnvironment.js');
 
 module.exports = {
   overrides: [
     {
       files: ['webpack/**/*.js', '*.config.js', '*rc.js'],
-      globals: additionalGlobals,
+      globals: additionalGlobalsEslint,
       rules: {
         /** Allow to use require in config files */
         'global-require': 'off',

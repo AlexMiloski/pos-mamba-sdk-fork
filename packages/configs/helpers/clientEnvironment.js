@@ -16,4 +16,12 @@ if (fs.existsSync(externalEnvsPath)) {
   );
 }
 
-module.exports = externalConstants;
+const globalsKeys = Object.keys(externalConstants);
+
+const additionalGlobalsEslint =
+  (globalsKeys &&
+    globalsKeys.length &&
+    globalsKeys.map(k => ({ [k]: 'readonly' }))[0]) ||
+  {};
+
+module.exports = { externalConstants, additionalGlobalsEslint };

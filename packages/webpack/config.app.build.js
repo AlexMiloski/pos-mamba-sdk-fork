@@ -7,9 +7,9 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const FileManagerPlugin = require('filemanager-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssProcessor = require('cssnano');
+const { getPkg } = require('quickenv');
 const { BUNDLE_NAME, IS_PROD, IS_POS } = require('./helpers/consts.js');
 const MambaManifestPlugin = require('./plugins/MambaManifestPlugin.js');
-const { getPkg } = require('quickenv');
 
 const PKG = getPkg();
 

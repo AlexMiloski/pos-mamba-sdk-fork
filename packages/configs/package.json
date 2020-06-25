@@ -8,52 +8,29 @@
     "access": "public"
   },
   "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "eslint": "^5.13.0",
-    "postcss": "^7.0.14",
-    "prettier": "^1.16.4",
-    "stylelint": "^10.0.1",
-    "svelte-preprocess": "^2.4.3"
-  },
-  "peerDependencies": {
-    "@babel/core": "^7.2.2",
-    "@mamba/pos": "^2.8.2",
-    "eslint": "^5.13.0",
-    "postcss": "^7.0.14",
-    "prettier": "^1.16.4",
-    "svelte-preprocess": "^2.4.3"
-  },
-  "dependencies": {
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/plugin-transform-runtime": "^7.2.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/runtime": "^7.3.1",
-    "@tivac/eslint-plugin-svelte": "^1.2.1",
-    "babel-eslint": "^10.0.1",
-    "babel-plugin-dynamic-import-node": "^2.2.0",
-    "chalk": "^2.4.2",
-    "css-mqpacker": "^7.0.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^4.0.0",
-    "eslint-plugin-html": "^5.0.3",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^22.2.2",
-    "eslint-plugin-node": "^8.0.1",
-    "eslint-plugin-prettier": "^3.0.1",
-    "postcss-advanced-variables": "^3.0.0",
-    "postcss-calc": "^7.0.1",
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/runtime": "^7.10.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.0.0",
+    "eslint-plugin-svelte3": "^2.7.3",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-calc": "^7.0.2",
     "postcss-easy-import": "^3.0.0",
-    "postcss-extend-rule": "^2.0.0",
-    "postcss-hexrgba": "^1.0.1",
+    "postcss-extend-rule": "^3.0.0",
+    "postcss-hexrgba": "^2.0.1",
     "postcss-html": "^0.36.0",
-    "postcss-nested": "^4.1.1",
-    "postcss-preset-env": "^6.5.0",
+    "postcss-nested": "^4.2.1",
+    "postcss-preset-env": "^6.7.0",
     "postcss-reporter": "^6.0.1",
     "postcss-syntax": "^0.36.2",
-    "quickenv": "^0.0.6",
-    "resolve": "^1.10.0",
-    "stylelint-config-standard": "^18.2.0",
-    "webpack-merge": "^4.2.1"
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
   },
-  "gitHead": "869644effc7b7347a2ff75c956c57d69ee8236a5"
+  "dependencies": {
+    "svelte": "^3.23.2",
+    "webpack-merge": "^4.2.2"
+  }
 }
