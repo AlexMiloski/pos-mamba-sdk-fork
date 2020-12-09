@@ -34,8 +34,8 @@ interface PaymentOptions {
   editable_amount: boolean;
   min_installments: number;
   max_installments: number;
-  /* Respectivamente: Credito, Débito e Voucher/Ticket */
-  transactionType: 'credit' | 'debit' | 'voucher';
+  /* Respectivamente: Credito, Débito, Voucher/Ticket e Pix */
+  transactionType: 'credit' | 'debit' | 'voucher' | 'pix';
   /* Respectivamente: À vista, Sem Juros e Com Juros */
   installmentType: 'none' | 'merchant' | 'issuer';
   /** 2 ~ 99 */
