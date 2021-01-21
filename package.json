@@ -5,8 +5,16 @@
   "repository": "https://github.com/stone-payments/pos-mamba-sdk.git",
   "author": "Stone Payments",
   "license": "Apache-2.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "lint": "eslint '{tools,packages}/**/*.{js,ts,tsx}' --quiet --fix",
     "lint:css": "stylelint packages/**/*.{css,html,svelte,svg}"
+  },
+  "dependencies": {
+    "husky": "^5.0.6",
+    "lerna": "^3.22.1"
   }
 }
