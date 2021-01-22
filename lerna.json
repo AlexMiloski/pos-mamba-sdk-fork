@@ -2,5 +2,17 @@
   "lerna": "3.22.0",
   "npmClient": "yarn",
   "useWorkspaces": true,
-  "version": "independent"
+  "version": "independent",
+  "command": {
+    "publish": {
+      "ignoreChanges": [
+        "{.*,*}.{txt,md,yml}",
+        "{.*,*}{.config,rc,ignore}{,.js}",
+        "LICENSE",
+        "lerna.json"
+      ],
+      "message": "chore(release): publish",
+      "conventionalCommits": true
+    }
+  }
 }
