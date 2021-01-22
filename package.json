@@ -32,21 +32,16 @@
     }
   },
   "lint-staged": {
-    "linters": {
       "*.{html,svelte}": [
-        "stylelint --fix",
-        "git add"
+      "stylelint --fix"
       ],
       "*.js": [
-        "prettier --write",
-        "git add"
+      "prettier --write"
       ],
       "*.{pcss,css}": [
         "prettier --write",
-        "stylelint --fix",
-        "git add"
+      "stylelint --fix"
       ]
-    }
   },
   "config": {
     "commitizen": {
