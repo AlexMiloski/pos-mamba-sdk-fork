@@ -16,6 +16,7 @@
   "dependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "commitizen": "^4.2.3",
     "eslint": ">=6.0.0",
     "husky": ">=4",
     "lerna": "^3.22.1",
@@ -47,5 +48,10 @@
   },
   "devDependencies": {
     "lint-staged": ">=10"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
