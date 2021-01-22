@@ -1,10 +1,6 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
 ## Description
-<!-- Set the Jira issue number on the link -->
-
-[WEBSDK-XXXX](https://stonepayments.atlassian.net/browse/WEBSDK-XXXX)
-
 <!-- Describe the big picture of your changes here -->
 
 ## Motivation and Context
