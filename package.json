@@ -16,6 +16,7 @@
   "dependencies": {
     "@commitlint/cli": "^11.0.0",
     "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/config-lerna-scopes": "^11.0.0",
     "commitizen": "^4.2.3",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": ">=6.0.0",
@@ -32,16 +33,16 @@
     }
   },
   "lint-staged": {
-      "*.{html,svelte}": [
+    "*.{html,svelte}": [
       "stylelint --fix"
-      ],
-      "*.js": [
+    ],
+    "*.js": [
       "prettier --write"
-      ],
-      "*.{pcss,css}": [
-        "prettier --write",
+    ],
+    "*.{pcss,css}": [
+      "prettier --write",
       "stylelint --fix"
-      ]
+    ]
   },
   "config": {
     "commitizen": {
