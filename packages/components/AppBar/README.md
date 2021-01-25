@@ -2,10 +2,7 @@
 
 O módulo `AppBar` é composto por dois componentes: `AppBar` e `AppBarModifier`. O `AppBar` é a barra que fica localizada no canto superior da aplicação, ela pode ser estilizada utilizando seus `props`. Caso queira alterar qualquer um desses props em outra página, isso pode ser feito através do `AppBarModifier`, sem a necessidade de criar outra `AppBar`.
 
-
-<div class="iframe-wrapper">
-  <iframe src="https://bundlebrowser.mambaweb.now.sh/#!/appbar"></iframe>
-</div>
+<!-- @example ./example/Example.html -->
 
 ## Parâmetros
 
