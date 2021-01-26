@@ -53,4 +53,5 @@ module.exports = {
   scopes: [],
   questions: ["type", "scope", "subject", "issues", "lerna"],
   types: COMMIT_TYPES,
+  list: Object.keys(COMMIT_TYPES),
 };
